@@ -10,4 +10,4 @@ Does not contain model files so you need to use your own one, load and adjust th
 
 Test.cpp to run
 
-Maybe it will be a good sample to understand OpengL or a GameEngine, i hope
+Maybe it will be a good example to understand OpengL or a GameEngine, i hope
