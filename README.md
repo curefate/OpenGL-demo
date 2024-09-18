@@ -13,7 +13,7 @@ To run the source code, you need:
 <br>All resources are free on internet, most of them are from [Mixamo](https://www.mixamo.com/#/).
 
 ## Release file
-Can be download from this [link](https://drive.google.com/drive/folders/1fDpgYux7spfUZlJNzqTC1I2flfelW8lA?usp=sharing)
+Can be download from this [link](https://drive.google.com/drive/folders/1fDpgYux7spfUZlJNzqTC1I2flfelW8lA?usp=sharing).
 
 ## Others
 Sound related functions have not yet been implemented, so the `voice.h` is useless now.
