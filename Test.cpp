@@ -1,4 +1,4 @@
-#include "Initialization.h"
+#include "source_code/Initialization.h"
 
 using namespace glm;
 
@@ -21,7 +21,7 @@ int main()
 	//lamp.setScale(vec3(0.12));
 	//lamp.setPosition(vec3(1,0,-2));
 
-	Character Hero("resources/objects/Hero/Idle/Idle.dae", "Animation.vs", "Animation.fs");
+	Character Hero("resources/objects/Hero/Idle/Idle.dae", "shader/Animation.vs", "shader/Animation.fs");
 	objbuffer.addObject(&Hero);
 	Hero.setCamera(*camera);
 	Hero.setPosition(vec3(0, -0.4, 0));
@@ -68,7 +68,7 @@ int main()
 	heroController.addMovement(HITED, &hero_hited);
 	heroController.addMovement(HITED_BLOCK, &hero_block);
 
-	Character Zombie("resources/objects/Zombie/Zombie Idle/Zombie Idle.dae", "AnimationZ.vs", "AnimationZ.fs");
+	Character Zombie("resources/objects/Zombie/Zombie Idle/Zombie Idle.dae", "shader/AnimationZ.vs", "shader/AnimationZ.fs");
 	//objbuffer.addObject(&Zombie);
 	//Zombie.setCamera(*camera);
 	//Zombie.setPosition(vec3(-6, -0.4, 0));
@@ -95,7 +95,7 @@ int main()
 	//zombieController.animation_idle = &zombie_idle;
 	//zombieController.animation_walk = &zombie_walk;
 
-	Object city("resources/objects/base003.fbx", "Blinn-Phone light.vs", "Blinn-Phone light.fs");
+	Object city("resources/objects/base003.fbx", "shader/Blinn-Phone light.vs", "shader/Blinn-Phone light.fs");
 	objbuffer.addObject(&city);
 	city.setCamera(*camera);
 	city.setRotate(270, vec3(0, 1, 0));
@@ -134,20 +134,20 @@ int main()
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 	while (!glfwWindowShouldClose(window))
 	{
-		// ÉèÖÃ²ÎÊý -----------------------------------------------
+		// ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ -----------------------------------------------
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glEnable(GL_CULL_FACE);
 		glCullFace(GL_BACK);
 
-		// ¸üÐÂÊý¾Ý -----------------------------------------------
-		// Ö¡Ê±¼ä
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -----------------------------------------------
+		// Ö¡Ê±ï¿½ï¿½
 		float currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 		cout << deltaTime << endl;
-		// ÒõÓ°
+		// ï¿½ï¿½Ó°
 		objbuffer.GenerateShadow(lightbuffer, deltaTime);
-		// ÉãÏñ»ú
+		// ï¿½ï¿½ï¿½ï¿½ï¿½
 		camera2.update(Hero.position + vec3(0, 0.6, 0));
 
 
