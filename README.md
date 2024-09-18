@@ -12,6 +12,8 @@ To run the source code, you need:
 - [Resources(models, animations, textures...)](https://drive.google.com/drive/folders/18RRSnVsOj05GRBE_dkPKxL02JkJ-TxeA?usp=sharing)
 <br>All resources are free on internet, most of them are from [Mixamo](https://www.mixamo.com/#/).
 
+And run Test.cpp then.
+
 ## Release file
 Can be download from this [link](https://drive.google.com/drive/folders/1fDpgYux7spfUZlJNzqTC1I2flfelW8lA?usp=sharing).
 
